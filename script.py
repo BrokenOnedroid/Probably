@@ -75,7 +75,7 @@ class Generator:
 # Layout
 st.title('password generator')
 # password length
-new_password_lenght = st.number_input('Choose password length', step = 1, value = 10)
+new_password_lenght = st.number_input('Choose password length', step = 1, value = 10, min_value=6)
 #calls
 new_password = Generator()
 generated_password = new_password.generate_password(new_password_lenght)
