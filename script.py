@@ -71,4 +71,5 @@ new_password_lenght = st.number_input('Choose password length', step = 1, value 
 
 # calls
 new_password = Generator(new_password_lenght)
+st.text('Password:')
 st.text(new_password.generate_password())
