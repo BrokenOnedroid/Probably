@@ -72,4 +72,4 @@ new_password_lenght = st.number_input(label, min_value=6, max_value=100, value=,
 
 # calls
 new_password = Generator(new_password_lenght)
-print(new_password.generate_password())
+st.text(new_password.generate_password())
