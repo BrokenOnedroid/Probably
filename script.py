@@ -37,7 +37,7 @@ class Generator:
     if current_length > 1:
       current_length_weigth = current_length
     else:
-      current_length_weigth = 1
+      current_length_weigth = 2
       
     random_list_choice = [0, 1, 2, 3]
     random_weight = [current_length_weigth] * 4
