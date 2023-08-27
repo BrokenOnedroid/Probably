@@ -34,8 +34,13 @@ class Generator:
   # depending on the amount of used entries out of the list change possibilites 
   def chooselist(self):
     current_length = self.length + 2 - len(self.password)
+    if current_length <> 0:
+      current_length_weigth = current_length
+    else:
+      current_length_weigth = 1
+      
     random_list_choice = [0, 1, 2, 3]
-    random_weight = [current_length] * 4
+    random_weight = [current_length_weigth] * 4
     # print(random_weight)
     # 0 = lowercase
     # 1 = uppercase
