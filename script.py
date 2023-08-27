@@ -41,6 +41,7 @@ class Generator:
       
     random_list_choice = [0, 1, 2, 3]
     random_weight = [current_length_weigth] * 4
+    st.text('random_weight' random_weight)
     # print(random_weight)
     # 0 = lowercase
     # 1 = uppercase
