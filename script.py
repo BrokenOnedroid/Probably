@@ -10,12 +10,12 @@ st.title('password generator')
 
 #lists for vars
 class Generator:
-  def __init__(self, length):
+  def __init__(self):
     self.lowercase_chars = list(string.ascii_lowercase)
     self.uppercase_chars = list(string.ascii_uppercase)
     self.digits = list(string.digits)
     self.special = list(string.punctuation)
-    self.length = length
+    self.length = 0
     self.password = ''
 
   # choosing one entry of the choosen list
@@ -61,15 +61,19 @@ class Generator:
     return result
   
   # generate the password depending on the length
-  def generate_password(self):
+  def generate_password(self, length):
+      self.length = length
       for i in range(self.length):
         self.password += self.chooserandom(self.chooselist())       
       return self.password  
 
-##password length
+# password length
 new_password_lenght = st.number_input('Choose password length', step = 1, value = 10)
 
 # calls
-new_password = Generator(new_password_lenght)
+new_password = Generator()
+generated_password = new_password.generate_password(new_password_lenght)
+
+# output
 st.text('Password:')
-st.text(new_password.generate_password())
+st.text()
