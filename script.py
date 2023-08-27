@@ -68,7 +68,7 @@ class Generator:
       return self.password  
 
 ##password length
-new_password_lenght = st.number_input('Choose password length')
+new_password_lenght = st.number_input('Choose password length', step = 1, value = 10)
 
 # calls
 new_password = Generator(new_password_lenght)
