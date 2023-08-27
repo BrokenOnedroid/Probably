@@ -46,12 +46,6 @@ class Generator:
     random_list_choice = [0, 1, 2, 3]
     random_weight = [current_length_weigth] * 4
     
-    #st.text(random_weight)
-    # print(random_weight)
-    # 0 = lowercase
-    # 1 = uppercase
-    # 2 = digits
-    # 3 = special 
     if self.password == '':
       result = random.choice(random_list_choice)
     else:
@@ -80,11 +74,11 @@ class Generator:
 
 # calls
 new_password = Generator()
-generated_password = new_password.generate_password(new_password_lenght)
 
 # output
 st.title('password generator')
 # password length
 new_password_lenght = st.number_input('Choose password length', step = 1, value = 10)
+generated_password = new_password.generate_password(new_password_lenght)
 st.text('Password:')
 st.text(generated_password)
