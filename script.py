@@ -72,13 +72,13 @@ class Generator:
         self.password += self.chooserandom(self.chooselist())       
       return self.password  
 
-# calls
-new_password = Generator()
-
-# output
+# Layout
 st.title('password generator')
 # password length
 new_password_lenght = st.number_input('Choose password length', step = 1, value = 10)
+#calls
+new_password = Generator()
 generated_password = new_password.generate_password(new_password_lenght)
+#output
 st.text('Password:')
 st.text(generated_password)
