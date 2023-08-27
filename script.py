@@ -12,9 +12,6 @@ UPPERCASE = 1
 DIGITS = 2
 SPECIAL = 3
 
-
-
-
 #lists for vars
 class Generator:
   def __init__(self):
@@ -28,13 +25,13 @@ class Generator:
   # choosing one entry of the choosen list
   def chooserandom(self, onelist):
     choice = []
-    if onelist == 0:
+    if onelist == LOWERCASE:
       choice = self.lowercase_chars
-    elif onelist == 1:
+    elif onelist == UPPERCASE:
       choice = self.uppercase_chars
-    elif onelist == 2:
+    elif onelist == DIGITS:
       choice = self.digits
-    elif onelist == 3:
+    elif onelist == SPECIAL:
       choice = self.special
     return random.choice(choice)
 
