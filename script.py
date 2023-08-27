@@ -84,5 +84,3 @@ generated_password = new_password.generate_password(new_password_lenght)
 # output
 st.text('Password:')
 st.text(generated_password)
-
-st.button('Rerun generation', on_click=new_password.generate_password(new_password_lenght))
