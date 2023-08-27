@@ -1,7 +1,12 @@
 ##python 3.11
 # libary
+import streamlit as st
 import random
 import string
+import pandas as pd
+import numpy as np
+
+st.title('password generator')
 
 #lists for vars
 class Generator:
