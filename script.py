@@ -34,7 +34,7 @@ class Generator:
   # depending on the amount of used entries out of the list change possibilites 
   def chooselist(self):
     current_length = self.length + 2 - len(self.password)
-    if current_length <> 0:
+    if current_length > 1:
       current_length_weigth = current_length
     else:
       current_length_weigth = 1
