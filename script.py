@@ -42,8 +42,7 @@ class Generator:
     random_list_choice = [0, 1, 2, 3]
     random_weight = [current_length_weigth] * 4
     
-    st.text(random_weight)
-    
+    #st.text(random_weight)
     # print(random_weight)
     # 0 = lowercase
     # 1 = uppercase
@@ -56,19 +55,19 @@ class Generator:
       for char in self.password:
         if char in self.lowercase_chars:
           random_weight[0] = random_weight[0] / 2
-          st.text(random_weight[0])
+    #     st.text(random_weight[0])
       for char in self.password:
         if char in self.uppercase_chars:
           random_weight[1] = random_weight[1] / 2
-          st.text(random_weight[1])
+    #      st.text(random_weight[1])
       for char in self.password:
         if char in self.digits:
           random_weight[2] = random_weight[2] / 2
-          st.text(random_weight[2])
+    #      st.text(random_weight[2])
       for char in self.password:
         if char in self.special:
           random_weight[3] = random_weight[3] / 2
-          st.text(random_weight[3])
+    #      st.text(random_weight[3])
       result = random.choices(random_list_choice, weights=random_weight, k=1)[0]
     return result
   
