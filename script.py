@@ -61,10 +61,10 @@ class Generator:
     return result
   
   # generate the password depending on the length
-def generate_password(self):
-    for i in range(self.length):
-      self.password += self.chooserandom(self.chooselist())       
-    return self.password  
+  def generate_password(self):
+      for i in range(self.length):
+        self.password += self.chooserandom(self.chooselist())       
+      return self.password  
 
 ##password length
 new_password_lenght = st.number_input('Choose password length', step = 1, value = 10)
