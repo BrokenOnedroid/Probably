@@ -76,4 +76,4 @@ generated_password = new_password.generate_password(new_password_lenght)
 
 # output
 st.text('Password:')
-st.text()
+st.text(generated_password)
