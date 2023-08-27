@@ -54,16 +54,16 @@ class Generator:
       # depending on amount of already used chars change possible list
       for char in self.password:
         if char in self.lowercase_chars:
-          random_weight[0] = random_weight[0] % 2
+          random_weight[0] = random_weight[0] / 2 
       for char in self.password:
         if char in self.uppercase_chars:
-          random_weight[1] = random_weight[1] % 2
+          random_weight[1] = random_weight[1] / 2
       for char in self.password:
         if char in self.digits:
-          random_weight[2] = random_weight[2] % 2
+          random_weight[2] = random_weight[2] / 2
       for char in self.password:
         if char in self.special:
-          random_weight[3] = random_weight[3] % 2
+          random_weight[3] = random_weight[3] / 2
       result = random.choices(random_list_choice, weights=random_weight, k=1)[0]
     return result
   
