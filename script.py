@@ -72,6 +72,9 @@ class Generator:
         self.password += self.chooserandom(self.chooselist())       
       return self.password  
 
+def click_button():
+  st.rerun()
+
 # Layout
 st.title('password generator')
 # password length
@@ -83,4 +86,4 @@ generated_password = new_password.generate_password(new_password_lenght)
 st.text('Password:')
 st.text(generated_password)
 
-st.button('Rerun', on_click=st.rerun())
+st.button('Rerun', on_click=click_button)
