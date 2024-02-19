@@ -83,4 +83,6 @@ generated_password = new_password.generate_password(new_password_lenght)
 st.text('Password:')
 st.text(generated_password)
 
+st.title('Press the R button to generate a new password.')
+
 # st.button("Rerun", use_container_width=True, on_click=new_password.generate_password(new_password_lenght))
